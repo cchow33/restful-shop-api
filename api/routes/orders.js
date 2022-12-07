@@ -4,6 +4,7 @@ const router = express.Router();
 // 1. Implement route for GET requests to /orders (localhost:3000/orders/)
 router.get('/', (req, res, next) => {
   res.status(200).json({
+    // return an object with the message property:
     message: 'Orders were fetched'
   });
 });
