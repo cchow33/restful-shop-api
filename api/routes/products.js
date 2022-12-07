@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 
 // 2. Implement a POST route using the post() method to handle POST requests.
 router.post('/', (req, res, next) => { 
-  res.status(200).json({
+  res.status(201).json({
     // return an object with the message property:
       message: 'Handling POST requests to /products'
   });
