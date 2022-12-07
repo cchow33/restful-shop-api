@@ -10,8 +10,14 @@ router.get('/', (req, res, next) => {
 
 // 2. Implement route for POST requests (localhost:3000/orders/)
 router.post('/', (req, res, next) => {
+  // Create order object:
+  const order = {
+    productId: req.body.productId,
+    quantity: req.body.quantity
+  };
   res.status(201).json({
-    message: 'Order was created'
+    message: 'Order was created',
+    order: order
   });
 });
 

@@ -11,9 +11,16 @@ router.get('/', (req, res, next) => {
 
 // 2. Implement a POST route using the post() method to handle POST requests.
 router.post('/', (req, res, next) => { 
+  // Data for creating a product
+  const product = {
+    name: req.body.name,
+    price: req.body.price
+  };
   res.status(201).json({
     // return an object with the message property:
-      message: 'Handling POST requests to /products'
+      message: 'Handling POST requests to /products',
+      // Create 'createProduct' object and pass 'product' to it
+      createdProduct: product
   });
 });
 
